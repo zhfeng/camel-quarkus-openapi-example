@@ -43,6 +43,35 @@ You can then execute your native executable with: `./target/camel-quarkus-openap
 
 If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.html.
 
+## Run
+
+You can also access the REST endpoint from the command line:
+
+```
+$ curl http://localhost:8080/api/users
+```
+
+The command will produce the following output:
+
+```
+[ {
+  "id" : 1,
+  "name" : "John Coltrane"
+}, {
+  "id" : 2,
+  "name" : "Miles Davis"
+}, {
+  "id" : 3,
+  "name" : "Sonny Rollins"
+} ]
+```
+
+The OpenApi documentation is located at: `\http://localhost:8080/api/api-doc` and can be retrieved with the following command:
+
+```
+$ curl http://localhost:8080/api/api-doc
+```
+
 # RESTEasy JAX-RS
 
 Guide: https://quarkus.io/guides/rest-json
