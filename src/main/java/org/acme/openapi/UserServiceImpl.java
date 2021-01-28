@@ -28,8 +28,11 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.TreeMap;
 
+import io.quarkus.runtime.annotations.RegisterForReflection;
+
 @ApplicationScoped
 @Named("userService")
+@RegisterForReflection // Let Quarkus register this class for reflection during the native build
 public class UserServiceImpl implements UserService {
     private final Map<Integer, User> users = new TreeMap<>();
 
